@@ -34,7 +34,6 @@ gaussian_frame=pyr[-1]
 if i==0:
 vid_data=np.zeros((video_tensor.shape[0],gaussian_frame.shape[0],gaussian_frame.
 shape[1],3))
-30
 vid_data[i]=gaussian_frame
 return vid_data
 def temporal_ideal_filter(self,tensor,low,high,fps,axis=0):
@@ -76,7 +75,6 @@ for k in range(levels):
 tensor_list.append(np.zeros((video_tensor.shape[0],pyr[k].shape[0],pyr[k].shape[1],3)
 ))
 for n in range(levels):
-31
 tensor_list[n][i] = pyr[n]
 return tensor_list
 #Build Laplacian Pyramid
@@ -119,7 +117,6 @@ tensor = np.zeros((len(buffer), 192, 256, 3), dtype = "float")
 i = 0
 for i in range(len(buffer)):
 tensor[i] = buffer[i]
-32
 return tensor
 def run_color(self):
 self.times.append(time.time() - self.t0)
@@ -158,7 +155,6 @@ self.data_buffer.append(f1)
 self.run_color()
 cv2.putText(frame, "FPS "+str(float("{:.2f}".format(self.fps))),
 (20,420), cv2.FONT_HERSHEY_PLAIN, 1.5, (0, 255, 0),2)
-33
 cv2.imshow("Original",frame)
 f2 = imutils.resize(cv2.convertScaleAbs(self.frame_out), width = 640)
 cv2.imshow("Color amplification",f2)

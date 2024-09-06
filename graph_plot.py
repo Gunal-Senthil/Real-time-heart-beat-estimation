@@ -19,7 +19,6 @@ with open("signal.dat") as f:
 lines = f.readlines()
 for i in range(lines. len ()):
 r,g,b = lines[i].split("%")
-36
 arr_red.append(float(r))
 arr_green.append(float(g))
 arr_blue.append(float(b))

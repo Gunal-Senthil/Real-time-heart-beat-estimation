@@ -22,7 +22,6 @@ if len(rects)>0:
 status = True
 (x, y, w, h) = face_utils.rect_to_bb(rects[0])
 if y<0:
-34
 print("a")
 return frame, face_frame, ROI1, ROI2, status, mask
 face_frame = frame[y:y+h,x:x+w]
@@ -55,7 +54,6 @@ status = False
 return frame, face_frame, ROI1, ROI2, status, mask
 def face_remap(self,shape):
 remapped_image = shape.copy()
-35
 # left eye brow
 remapped_image[17] = shape[26]
 remapped_image[18] = shape[25]
